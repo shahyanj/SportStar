@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The GOAT</title>
+
+<!-- CSS -->
+
+<style>
+.gallery {
+  background: #eee;
+  width: 500px;
+  margin: 1em auto;
+}
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+.gallery .hero {
+  padding: 1em;
+}
+.gallery .thumbs {
+  background: #ddd;
+  padding: 1em;
+  text-align: center;
+}
+.gallery .thumbs img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+.gallery .active {
+  opacity: 0.5;
+}
+</style>
+
+
+
+<!-- HTML -->
+
+<div class="gallery">
+  <div class="hero"></div>
+  <div class="thumbs"></div>
+</div>
+
+
+
+<!--JAVA Script  -->
+
+<script>
+// the images variable is an array of images to be in your gallery.
+// add 4 images to this array to be displayed
+var images = [
+  'https://static.boredpanda.com/blog/wp-content/uploads/2017/06/puppy-k-9-police-dogs-taiwan-police-8-594105d066f5f__700.jpg',
+  'http://cdn.iflscience.com/images/10b1fe75-ceab-5586-afb4-bdfcdadbd4c9/default-1464370531-4239-why-adorable-puppies-can-make-you-feel-violent.jpg',
+  'https://tailandfur.com/wp-content/uploads/2016/11/40-Fluffy-Pictures-of-Puppies-that-Looks-like-Pandas-3.jpg',
+  'http://www.cs.columbia.edu/artemis/students/2013/Angela_V/Images/puppies.jpg'
+];
+
+// galleryBox is the div with a class of gallery
+// find the div and set the variable to the DOM Element
+var galleryBox = document.querySelector('.gallery');
+
+
+// heroImage is setting up a template to be placed as your hero image
+// we're using the images array and grabbing the first image (ie. 0th place)
+
+var heroImage = `<img src="${images[0]}" />`;
+
+// thumbs is a blank variable right now
+// you need to:
+  // loop through your images
+  // make a template of an image tag
+  // set the src of the img tag to the current image you're looping over
+  // add that image to the thumbs variable (thumbs += template)
+
+var thumbs = "";
+images.forEach(function(image){
+  thumbs += `<img src="${image}" />`
+})
+
+// find the hero div using querySelector()
+// set the innerHTML to your heroImage template
+
+var heroDiv = document.querySelector('.hero');
+heroDiv.innerHTML = heroImage
+
+
+
+// find the thumbs div using querySelector()
+// set the innerHTML to your thumbs template
+
+
+// START HERE!!!!!!!!!!!!!*********
+var thumbsDiv = document.querySelector('.thumbs');
+thumbsDiv.innerHTML = thumbs
+
+
+// an an event listener on the galleryBox div
+// use a 'click' listener
+// in the function that handles the click:
+  // create a variable for a new image template
+  // set the src of the image to the src of the thumbnail you clicked on (hint use event variable)
+  // find the hero div with querySelector()
+  // set the innerHTML of that div to be equal to your new hero template
+
+galleryBox.addEventListener("click", function() {
+    if (event.target.src) {
+      var newHero = `<img src="${event.target.src}" />`;
+      heroDiv.innerHTML = newHero;
+    }
+})
+
+
+
+// THAT'S IT! go to your page and test it out!
+// Build on this and implement it to your own site.
+</script>

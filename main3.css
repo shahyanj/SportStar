@@ -3,7 +3,7 @@ body {
 }
 
 body {
-  background-color: lightblue;
+  background-color: black;
 }
 
 .header{
@@ -24,8 +24,8 @@ body {
 }
 
 .navigation{
-  color: Pink;
-  background-color: green;
+  color: black;
+  background-color: black;
   font-family: cursive;
   text-align: center;
   display: flex;
@@ -34,19 +34,13 @@ body {
   list-style: none;
 }
 
-.whoisit{
-  display: block;
-  margin: auto;
-  width: 50%;
-}
-
 .navigation a {
-  color: Pink;
+  color: red;
   padding: 10px;
 }
 
 .navigation a:hover{
-  color: lightblue
+  color: green
 }
 
 a {color:navy;
@@ -55,4 +49,13 @@ a {color:navy;
 a:hover {
   color: green;
 
+  }
+
+
+.clickhere{
+    color: red;
+    display: block;
+    margin: auto;
+    width: 20em;
+    margin: auto;
   }

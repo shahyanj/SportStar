@@ -4,6 +4,7 @@ body {
 
 body {
   background-color: black;
+  background-image: url(https://i.ytimg.com/vi/DEIbKb3r5-U/maxresdefault.jpg);
 }
 
 .header{
@@ -51,6 +52,9 @@ a:hover {
 
   }
 
+.clickherediv{
+  flex: auto;
+}
 
 .clickhere{
     color: red;
@@ -58,4 +62,6 @@ a:hover {
     margin: auto;
     width: 20em;
     margin: auto;
+    font-family: fantasy;
+    font-weight: bolder;
   }

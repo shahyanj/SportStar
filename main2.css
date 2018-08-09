@@ -3,18 +3,24 @@ body {
 }
 
 body {
-  background-color: lightblue;
+  background-color: black;
 }
 
 .header{
   color: red;
   text-align: center;
-  font-family: fantasy;
+  font-family: cursive;
   font-weight: bold;
 }
 
+.text{
+  color: silver;
+  font-weight: bold;
+  text-align: center;
+}
+
 .subheader{
-  color: magenta;
+  color: red;
   text-align: center;
 }
 
@@ -23,10 +29,16 @@ body {
   text-align: center;
 }
 
+.list{
+  color: grey;
+  text-align: center;
+  list-style: none;
+}
+
 .navigation{
   color: Pink;
-  background-color: green;
-  font-family: cursive;
+  background-color: black;
+  font-family: fantasy;
   text-align: center;
   display: flex;
   align-items: center;
@@ -40,6 +52,14 @@ body {
   width: 50%;
 }
 
+
+/* HOW DO I CENTER THIS DIV */
+/* .center-div{
+  content: center */
+/* } */
+/* HOW DO I CENTER THIS DIV */
+
+
 .navigation a {
   color: Pink;
   padding: 10px;
@@ -49,7 +69,7 @@ body {
   color: lightblue
 }
 
-a {color:navy;
+a {color:lightblue;
 }
 
 a:hover {
